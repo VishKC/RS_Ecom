@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Suite">
+	
+	<groups>
+		<run>
+			<include name="purchase"/>
+		</run>
+	</groups>
+	
+  <test thread-count="5" name="Submit Order Test">
+    <classes>
+      <class name="vishwalearning.SubmitOrderTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="Error Validation Test">
+    <classes>
+      <class name="vishwalearning.ErrorValidationTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="Base Test">
+    <classes>
+      <class name="vishwalearning.TestComponents.BaseTest"/>
+    </classes>
+  </test> <!-- Test -->
+
+</suite> <!-- Suite -->
